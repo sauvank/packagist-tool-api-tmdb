@@ -1,0 +1,23 @@
+{
+    "name": "sauvank/api-tmdb-php",
+    "description": "Simple tools for get data from tmdb Api.",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John Smith",
+            "email": "john@smith.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "ApiTmdb": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "platform": {
+            "php": "7.4.0"
+        }
+    }
+}
