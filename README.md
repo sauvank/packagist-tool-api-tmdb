@@ -145,6 +145,10 @@ $resultApi->getOriginalTitle();
 
 // return string
 ->getReleaseDate();
+
+//Return int
+// Total result of current page
+->countResultPage();
 ````
 
 #### Get tv show 
@@ -309,4 +313,8 @@ $resultApi->getOriginalTitle();
 
 // return bool
 ->getIsInProduction();
+
+//Return int
+// Total result of current page
+->countResultPage();
 ````

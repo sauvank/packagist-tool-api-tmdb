@@ -209,6 +209,10 @@ class CommonMovieTvShow extends ApiTmdb {
         return $this->result['total_results'];
     }
 
+    private function countResultPage(): int{
+        return count($this->result['result']);
+    }
+
     protected function dataApiFromId(int $id): array {
         $url = $this->urlType . $id . '?' . $this->endUrl();
         return $this->callApi($url);
