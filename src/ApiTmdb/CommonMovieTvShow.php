@@ -192,7 +192,7 @@ class CommonMovieTvShow extends ApiTmdb {
     }
 
     public function countResultPage(): int{
-        return count($this->result['results']);
+        return $this->isSearchById ? $this->totalResultById() : count($this->result['results']);
     }
 
     /**
