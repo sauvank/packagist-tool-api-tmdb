@@ -188,6 +188,10 @@ class CommonMovieTvShow extends ApiTmdb {
         return $this->callApi($url)['genres'];
     }
 
+    public function countResultPage(): int{
+        return count($this->result['result']);
+    }
+
     /**
      * Return a array contain name of genres from array idsGenres
      * @param array $idsGenres
@@ -207,10 +211,6 @@ class CommonMovieTvShow extends ApiTmdb {
 
     private function totalResultByName(){
         return $this->result['total_results'];
-    }
-
-    private function countResultPage(): int{
-        return count($this->result['result']);
     }
 
     protected function dataApiFromId(int $id): array {
