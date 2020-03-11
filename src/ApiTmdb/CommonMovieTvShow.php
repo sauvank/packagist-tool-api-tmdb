@@ -175,7 +175,7 @@ class CommonMovieTvShow extends ApiTmdb {
     public function getResultsByIndex(int $index) {
         $classReturn  = $this->typeOfSearch === 'movie' ? Movie::class : TvShow::class;
         $m = new $classReturn($this->getApiKey(), $this->getLang(), $this->typeOfSearch);
-        return $m->getById($this->result['results'][$index]['id']);
+        return $m->getById($this->result['results'][$index]['id'] ?? $this->result['id']);
     }
 
     /**
