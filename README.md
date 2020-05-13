@@ -61,8 +61,23 @@ $resultApi->getOriginalTitle();
 // Return string
 ->getTitle();
 
-// Return string
+// Return MovieCollection
 ->getCollection();
+
+//Return id collection
+->getCollection()->getId();
+
+
+//Return url backdrop path
+->getCollection()->getUrlBackdropPath();
+
+
+//Return url poster path
+->getCollection()->getUrlPosterPath();
+
+
+//Return name collection
+->getCollection()->getName();
 
 //Return array
 ->getProductionCompanies();
@@ -70,8 +85,23 @@ $resultApi->getOriginalTitle();
 // return int
 ->getBudget();
 
-// return array
+// return MovieGenre
 ->getGenres();
+
+// Return Array [id, name] of genres
+->getGenres()->getAll();
+
+//Return Array genre from index genres, null if index not exist
+->getGenres()->getByIndex();
+
+//Return Array, all genres  sort by name ASC
+->getGenres()->orderByName();
+
+//Return Array [string..] all genre, but only value name
+->getGenres()->onlyName();
+
+
+
 
 // Return string
 ->getHomepage();

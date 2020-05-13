@@ -60,8 +60,9 @@ class CommonMovieTvShow extends ApiTmdb {
         return  $this->result[$key];
     }
 
-    public function getCollection(): ?string{
-        return $this->result['belongs_to_collection'];
+    public function getCollection(): ?MovieCollection {
+        $collection = $this->result['belongs_to_collection'];
+        return $collection === NULL ? null : new  MovieCollection($collection);
     }
 
     public function getProductionCompanies(): array {
@@ -72,8 +73,9 @@ class CommonMovieTvShow extends ApiTmdb {
         return $this->result['budget'];
     }
 
-    public function getGenres(): array {
-        return $this->result['genres'];
+    public function getGenres(): MovieGenres {
+//        return $this->result['genres'];
+        return new MovieGenres($this->result['genres']);
     }
 
     public function getHomepage(): string {
