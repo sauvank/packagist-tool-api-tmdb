@@ -27,6 +27,14 @@ class ApiTmdb{
         $this->isApiKeyAvailable();
     }
 
+    public function movie(): Movie{
+        return new Movie($this->apiKey, $this->lang);
+    }
+
+    public function tvShow(): TvShow{
+        return new TvShow($this->apiKey, $this->lang);
+    }
+
     /**
      * Return if the API key is available.
      * @throws Exception

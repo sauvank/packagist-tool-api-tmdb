@@ -164,7 +164,7 @@ class CommonMovieTvShow extends ApiTmdb {
      * Return all data returned by api
      * @return mixed
      */
-    public function getResult(): array {
+    public function getArrayResults(): array {
         return $this->result;
     }
 

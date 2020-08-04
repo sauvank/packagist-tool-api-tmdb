@@ -44,6 +44,10 @@ class TvShow extends CommonMovieTvShow {
         return $this->result['first_air_date'] ?? '0000-00-00';
     }
 
+    public function getReleaseDate(): string {
+        return $this->getFirstAirDate();
+    }
+
     public function  getLastAirDate(): string {
         return $this->result['last_air_date'] ?? '0000-00-00';
     }

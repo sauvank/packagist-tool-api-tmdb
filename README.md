@@ -25,7 +25,7 @@ $tmdb = new Movie($apiKey);
 $resultApi = $tmdb->getByName('batman');
 
 // return array contain all result.
-$resultApi->getResult();
+$resultApi->getArrayResults();
 
 // Get result by index array
 $resultApi->getResultsByIndex(0);
@@ -40,7 +40,7 @@ $resultApi->getResultsByIndex(0)->getOriginalTitle();
 $resultApi = $tmdb->getById(500);
 
 // return array contain data movie.
-$resultApi->getResult();
+$resultApi->getArrayResults();
 
 //Exemple for get origin title.
 $resultApi->getOriginalTitle();
@@ -199,7 +199,7 @@ $tmdb = new TvShow($apiKey);
 $resultApi = $tmdb->getByName('batman');
 
 // return array contain all result.
-$resultApi->getResult();
+$resultApi->getArrayResults();
 
 // Get result by index array
 $resultApi->getResultsByIndex(0);
@@ -214,7 +214,7 @@ $resultApi->getResultsByIndex(0)->getOriginalTitle();
 $resultApi = $tmdb->getById(500);
 
 // return array contain data movie.
-$resultApi->getResult();
+$resultApi->getArrayResults();
 
 //Exemple for get origin title.
 $resultApi->getOriginalTitle();
@@ -319,6 +319,9 @@ $resultApi->getOriginalTitle();
 
 // return string
 ->getFirstAirDate();
+
+// return string, equal to getFirstAirDate()
+->getReleaseDate();
 
 // return string
 ->getLastAirDate();
