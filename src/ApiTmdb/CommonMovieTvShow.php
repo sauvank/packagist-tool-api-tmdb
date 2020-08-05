@@ -57,7 +57,7 @@ class CommonMovieTvShow extends ApiTmdb {
 
     public function getTitle(): string {
         $key = $this->typeOfSearch === 'movie' ? 'title' : 'name';
-        return  $this->result[$key];
+        return  isset($this->result[$key]) ? $this->result[$key] : $this->result['results'][0][$key];
     }
 
     public function getCollection(): ?MovieCollection {
