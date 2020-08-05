@@ -15,7 +15,14 @@ class TvShow extends CommonMovieTvShow {
     public function getById(int $id): TvShow{
         $this->isSearchById = true;
         $this->result = $this->dataApiFromId($id);
+
+        //No result found
+        if(isset($this->result['status_code']) && $this->result['status_code'] === 34){
+            return $this;
+        }
+
         $this->result['seasons_class'] = new TvShowSeason($this->result['seasons']);
+
         return $this;
     }
 
@@ -29,6 +36,10 @@ class TvShow extends CommonMovieTvShow {
         $url = $this->urlSearch . '?' . $this->endUrl() . '&query='. urlencode(trim($name));
         $this->callApi($url);
         $this->result = $this->callApi($url);
+
+        if(!isset($this->result['results'])){
+            return $this;
+        }
 
         foreach ($this->result['results'] as $key => $val){
             $this->result['results'][$key]['genres_name'] = $this->idsGenresToName($val['genre_ids']);
