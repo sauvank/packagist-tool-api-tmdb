@@ -350,4 +350,8 @@ $resultApi->getOriginalTitle();
 //Return int
 // Total result of current page
 ->countResultPage();
+
+// Return array or false
+// array contain data detail episode or false episode not found from $episode and $season variable
+->getDetailsEpisode();
 ````

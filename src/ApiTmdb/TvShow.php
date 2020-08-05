@@ -111,4 +111,18 @@ class TvShow extends CommonMovieTvShow {
         return $this->result['type'];
     }
 
+    /**
+     * Return array contain details episode.
+     * TODO create getter and setter
+     * @param int $season
+     * @param int $episode
+     * @return array|bool array contain data detail episode or false episode not found from $episode and $season variable
+     */
+    public function getDetailsEpisode(int $season, int $episode){
+        $id = isset($this->result['id']) ? $this->result['id'] : (isset($this->result['results']) ? $this->result['results'][0]['id'] : false);
+        $url = $this->baseUrl . "tv/$id/season/$season/episode/$episode?" . $this->endUrl();
+        $result = $this->callApi($url);
+        return isset($result['status_code']) ? false : $result;
+    }
+
 }
