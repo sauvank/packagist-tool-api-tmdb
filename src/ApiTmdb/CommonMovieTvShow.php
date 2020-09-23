@@ -215,7 +215,7 @@ class CommonMovieTvShow extends ApiTmdb {
     }
 
     private function totalResultByName(){
-        return $this->result['total_results'];
+        return isset($this->result['total_results']) ? $this->result['total_results'] : 0 ;
     }
 
     protected function dataApiFromId(int $id): array {
