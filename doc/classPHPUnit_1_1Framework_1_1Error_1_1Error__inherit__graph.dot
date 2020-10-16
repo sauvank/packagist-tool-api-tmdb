@@ -1,0 +1,21 @@
+digraph "PHPUnit\Framework\Error\Error"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="PHPUnit\\Framework\\Error\l\\Error",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="PHPUnit\\Framework\\Exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1Exception.html"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RuntimeException",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PHPUnit\\Exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Exception.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Throwable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PHPUnit\\Framework\\Error\l\\Deprecated",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1Error_1_1Deprecated.html"];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PHPUnit\\Framework\\Error\l\\Notice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1Error_1_1Notice.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PHPUnit\\Framework\\Error\l\\Warning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1Error_1_1Warning.html"];
+}

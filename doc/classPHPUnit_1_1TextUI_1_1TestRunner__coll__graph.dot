@@ -1,0 +1,11 @@
+digraph "PHPUnit\TextUI\TestRunner"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="PHPUnit\\TextUI\\TestRunner",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PHPUnit\\Runner\\BaseTestRunner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Runner_1_1BaseTestRunner.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" STATUS_INCOMPLETE\nSTATUS_RISKY\nSTATUS_FAILURE\nSUITE_METHODNAME\nSTATUS_SKIPPED\nSTATUS_WARNING\nSTATUS_ERROR\nSTATUS_PASSED\nSTATUS_UNKNOWN" ,fontname="Helvetica"];
+  Node4 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" EXCEPTION_EXIT\nSUCCESS_EXIT\nFAILURE_EXIT" ,fontname="Helvetica"];
+}

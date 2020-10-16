@@ -1,0 +1,40 @@
+digraph "PHPUnit\Runner\Hook"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="PHPUnit\\Runner\\Hook",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="PHPUnit\\Runner\\AfterLast\lTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterLastTestHook.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PHPUnit\\Runner\\ResultCache\lExtension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Runner_1_1ResultCacheExtension.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PHPUnit\\Runner\\BeforeFirst\lTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1BeforeFirstTestHook.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PHPUnit\\Runner\\TestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1TestHook.html"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PHPUnit\\Runner\\AfterIncomplete\lTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterIncompleteTestHook.html"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PHPUnit\\Runner\\AfterRisky\lTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterRiskyTestHook.html"];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PHPUnit\\Runner\\AfterSkipped\lTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterSkippedTestHook.html"];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PHPUnit\\Runner\\AfterSuccessful\lTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterSuccessfulTestHook.html"];
+  Node8 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PHPUnit\\Runner\\AfterTest\lErrorHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterTestErrorHook.html"];
+  Node9 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="PHPUnit\\Runner\\AfterTest\lFailureHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterTestFailureHook.html"];
+  Node10 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="PHPUnit\\Runner\\AfterTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterTestHook.html"];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="PHPUnit\\Runner\\AfterTest\lWarningHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1AfterTestWarningHook.html"];
+  Node12 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="PHPUnit\\Runner\\BeforeTestHook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Runner_1_1BeforeTestHook.html"];
+}

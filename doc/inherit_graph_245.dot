@@ -1,0 +1,19 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node906 [label="SebastianBergmann\\CodeCoverage\l\\StaticAnalysis\\Cache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSebastianBergmann_1_1CodeCoverage_1_1StaticAnalysis_1_1Cache.html"];
+  Node906 -> Node834 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node834 [label="SebastianBergmann\\CodeCoverage\l\\StaticAnalysis\\CachingCoveredFile\lAnalyser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSebastianBergmann_1_1CodeCoverage_1_1StaticAnalysis_1_1CachingCoveredFileAnalyser.html"];
+  Node906 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="SebastianBergmann\\CodeCoverage\l\\StaticAnalysis\\CachingUncoveredFile\lAnalyser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSebastianBergmann_1_1CodeCoverage_1_1StaticAnalysis_1_1CachingUncoveredFileAnalyser.html"];
+  Node833 [label="SebastianBergmann\\CodeCoverage\l\\StaticAnalysis\\CoveredFileAnalyser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceSebastianBergmann_1_1CodeCoverage_1_1StaticAnalysis_1_1CoveredFileAnalyser.html"];
+  Node833 -> Node834 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node833 -> Node835 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node835 [label="SebastianBergmann\\CodeCoverage\l\\StaticAnalysis\\ParsingCoveredFile\lAnalyser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSebastianBergmann_1_1CodeCoverage_1_1StaticAnalysis_1_1ParsingCoveredFileAnalyser.html"];
+  Node0 [label="SebastianBergmann\\CodeCoverage\l\\StaticAnalysis\\UncoveredFileAnalyser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceSebastianBergmann_1_1CodeCoverage_1_1StaticAnalysis_1_1UncoveredFileAnalyser.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SebastianBergmann\\CodeCoverage\l\\StaticAnalysis\\ParsingUncoveredFile\lAnalyser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSebastianBergmann_1_1CodeCoverage_1_1StaticAnalysis_1_1ParsingUncoveredFileAnalyser.html"];
+}

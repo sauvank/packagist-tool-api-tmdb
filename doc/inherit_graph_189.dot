@@ -1,0 +1,39 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Prophecy\\Argument\\Token\l\\TokenInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceProphecy_1_1Argument_1_1Token_1_1TokenInterface.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Prophecy\\Argument\\Token\l\\AnyValuesToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1AnyValuesToken.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Prophecy\\Argument\\Token\l\\AnyValueToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1AnyValueToken.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Prophecy\\Argument\\Token\l\\ApproximateValueToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1ApproximateValueToken.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Prophecy\\Argument\\Token\l\\ArrayCountToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1ArrayCountToken.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Prophecy\\Argument\\Token\l\\ArrayEntryToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1ArrayEntryToken.html"];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Prophecy\\Argument\\Token\l\\ArrayEveryEntryToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1ArrayEveryEntryToken.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Prophecy\\Argument\\Token\l\\CallbackToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1CallbackToken.html"];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Prophecy\\Argument\\Token\l\\ExactValueToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1ExactValueToken.html"];
+  Node0 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Prophecy\\Argument\\Token\l\\IdenticalValueToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1IdenticalValueToken.html"];
+  Node0 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Prophecy\\Argument\\Token\l\\InArrayToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1InArrayToken.html"];
+  Node0 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Prophecy\\Argument\\Token\l\\LogicalAndToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1LogicalAndToken.html"];
+  Node0 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Prophecy\\Argument\\Token\l\\LogicalNotToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1LogicalNotToken.html"];
+  Node0 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Prophecy\\Argument\\Token\l\\NotInArrayToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1NotInArrayToken.html"];
+  Node0 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Prophecy\\Argument\\Token\l\\ObjectStateToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1ObjectStateToken.html"];
+  Node0 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Prophecy\\Argument\\Token\l\\StringContainsToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1StringContainsToken.html"];
+  Node0 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Prophecy\\Argument\\Token\l\\TypeToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Argument_1_1Token_1_1TypeToken.html"];
+}

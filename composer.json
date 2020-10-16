@@ -1,5 +1,5 @@
 {
-    "name": "sauvank/api-tmdb-php",
+    "name": "sauvank/packagist-tool-api-tmdb",
     "description": "Simple tools for get data from tmdb Api.",
     "type": "package",
     "license": "MIT",
@@ -19,5 +19,11 @@
         "platform": {
             "php": "7.4.0"
         }
+    },
+    "require": {
+        "phpunit/phpunit": "^9.2",
+        "ext-curl": "*",
+      "ext-json": "*",
+      "ext-memcached": "*"
     }
 }

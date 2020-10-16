@@ -1,0 +1,29 @@
+digraph "PHPUnit\Framework\TestCase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="PHPUnit\\Framework\\TestCase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="PHPUnit\\Framework\\Assert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1Assert.html"];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PHPUnit\\Framework\\Reorderable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Framework_1_1Reorderable.html"];
+  Node3 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PHPUnit\\Framework\\SelfDescribing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Framework_1_1SelfDescribing.html"];
+  Node4 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PHPUnit\\Framework\\Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePHPUnit_1_1Framework_1_1Test.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Countable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ApiTmdbTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classApiTmdbTest.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CrewTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCrewTest.html"];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PHPUnit\\Framework\\Incomplete\lTestCase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1IncompleteTestCase.html"];
+  Node0 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PHPUnit\\Framework\\Skipped\lTestCase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1SkippedTestCase.html"];
+  Node0 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="PHPUnit\\Framework\\Warning\lTestCase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Framework_1_1WarningTestCase.html"];
+  Node0 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="TvShowTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTvShowTest.html"];
+}

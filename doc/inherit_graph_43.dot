@@ -1,0 +1,23 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="PharIo\\Version\\VersionConstraint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacePharIo_1_1Version_1_1VersionConstraint.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="PharIo\\Version\\AbstractVersion\lConstraint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1AbstractVersionConstraint.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PharIo\\Version\\AndVersion\lConstraintGroup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1AndVersionConstraintGroup.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PharIo\\Version\\ExactVersion\lConstraint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1ExactVersionConstraint.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PharIo\\Version\\GreaterThan\lOrEqualToVersionConstraint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1GreaterThanOrEqualToVersionConstraint.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PharIo\\Version\\OrVersion\lConstraintGroup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1OrVersionConstraintGroup.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PharIo\\Version\\SpecificMajor\lAndMinorVersionConstraint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1SpecificMajorAndMinorVersionConstraint.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PharIo\\Version\\SpecificMajor\lVersionConstraint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1SpecificMajorVersionConstraint.html"];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PharIo\\Version\\AnyVersion\lConstraint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPharIo_1_1Version_1_1AnyVersionConstraint.html"];
+}

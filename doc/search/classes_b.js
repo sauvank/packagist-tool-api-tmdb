@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['label',['Label',['../classPhpParser_1_1Node_1_1Stmt_1_1Label.html',1,'PhpParser::Node::Stmt']]],
+  ['lazydouble',['LazyDouble',['../classProphecy_1_1Doubler_1_1LazyDouble.html',1,'Prophecy::Doubler']]],
+  ['legacyclasstagretriever',['LegacyClassTagRetriever',['../classProphecy_1_1PhpDocumentor_1_1LegacyClassTagRetriever.html',1,'Prophecy::PhpDocumentor']]],
+  ['lessthan',['LessThan',['../classPHPUnit_1_1Framework_1_1Constraint_1_1LessThan.html',1,'PHPUnit::Framework::Constraint']]],
+  ['lexer',['Lexer',['../classPhpParser_1_1Lexer.html',1,'PhpParser']]],
+  ['library',['Library',['../classPharIo_1_1Manifest_1_1Library.html',1,'PharIo::Manifest']]],
+  ['license',['License',['../classPharIo_1_1Manifest_1_1License.html',1,'PharIo::Manifest']]],
+  ['licenseelement',['LicenseElement',['../classPharIo_1_1Manifest_1_1LicenseElement.html',1,'PharIo::Manifest']]],
+  ['line',['Line',['../classPhpParser_1_1Node_1_1Scalar_1_1MagicConst_1_1Line.html',1,'PhpParser\Node\Scalar\MagicConst\Line'],['../classSebastianBergmann_1_1Diff_1_1Line.html',1,'SebastianBergmann\Diff\Line']]],
+  ['linecountingvisitor',['LineCountingVisitor',['../classSebastianBergmann_1_1LinesOfCode_1_1LineCountingVisitor.html',1,'SebastianBergmann::LinesOfCode']]],
+  ['linesofcode',['LinesOfCode',['../classSebastianBergmann_1_1LinesOfCode_1_1LinesOfCode.html',1,'SebastianBergmann::LinesOfCode']]],
+  ['link',['Link',['../classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Link.html',1,'phpDocumentor::Reflection::DocBlock::Tags']]],
+  ['list_5f',['List_',['../classPhpParser_1_1Node_1_1Expr_1_1List__.html',1,'PhpParser::Node::Expr']]],
+  ['lnumber',['LNumber',['../classPhpParser_1_1Node_1_1Scalar_1_1LNumber.html',1,'PhpParser::Node::Scalar']]],
+  ['loader',['Loader',['../classPHPUnit_1_1TextUI_1_1XmlConfiguration_1_1Loader.html',1,'PHPUnit\TextUI\XmlConfiguration\Loader'],['../classPHPUnit_1_1Util_1_1Xml_1_1Loader.html',1,'PHPUnit\Util\Xml\Loader']]],
+  ['location',['Location',['../classphpDocumentor_1_1Reflection_1_1Location.html',1,'phpDocumentor::Reflection']]],
+  ['logging',['Logging',['../classPHPUnit_1_1TextUI_1_1XmlConfiguration_1_1Logging_1_1Logging.html',1,'PHPUnit::TextUI::XmlConfiguration::Logging']]],
+  ['logicaland',['LogicalAnd',['../classPhpParser_1_1Node_1_1Expr_1_1BinaryOp_1_1LogicalAnd.html',1,'PhpParser\Node\Expr\BinaryOp\LogicalAnd'],['../classPHPUnit_1_1Framework_1_1Constraint_1_1LogicalAnd.html',1,'PHPUnit\Framework\Constraint\LogicalAnd']]],
+  ['logicalandtoken',['LogicalAndToken',['../classProphecy_1_1Argument_1_1Token_1_1LogicalAndToken.html',1,'Prophecy::Argument::Token']]],
+  ['logicalnot',['LogicalNot',['../classPHPUnit_1_1Framework_1_1Constraint_1_1LogicalNot.html',1,'PHPUnit::Framework::Constraint']]],
+  ['logicalnottoken',['LogicalNotToken',['../classProphecy_1_1Argument_1_1Token_1_1LogicalNotToken.html',1,'Prophecy::Argument::Token']]],
+  ['logicalor',['LogicalOr',['../classPhpParser_1_1Node_1_1Expr_1_1BinaryOp_1_1LogicalOr.html',1,'PhpParser\Node\Expr\BinaryOp\LogicalOr'],['../classPHPUnit_1_1Framework_1_1Constraint_1_1LogicalOr.html',1,'PHPUnit\Framework\Constraint\LogicalOr']]],
+  ['logicalxor',['LogicalXor',['../classPhpParser_1_1Node_1_1Expr_1_1BinaryOp_1_1LogicalXor.html',1,'PhpParser\Node\Expr\BinaryOp\LogicalXor'],['../classPHPUnit_1_1Framework_1_1Constraint_1_1LogicalXor.html',1,'PHPUnit\Framework\Constraint\LogicalXor']]],
+  ['logtoreportmigration',['LogToReportMigration',['../classPHPUnit_1_1TextUI_1_1XmlConfiguration_1_1LogToReportMigration.html',1,'PHPUnit::TextUI::XmlConfiguration']]],
+  ['longestcommonsubsequencecalculator',['LongestCommonSubsequenceCalculator',['../interfaceSebastianBergmann_1_1Diff_1_1LongestCommonSubsequenceCalculator.html',1,'SebastianBergmann::Diff']]]
+];

@@ -1,0 +1,22 @@
+digraph "Prophecy\Exception\Prediction\UnexpectedCallsCountException"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Prophecy\\Exception\l\\Prediction\\UnexpectedCalls\lCountException",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Prophecy\\Exception\l\\Prediction\\UnexpectedCalls\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Exception_1_1Prediction_1_1UnexpectedCallsException.html"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Prophecy\\Exception\l\\Prophecy\\MethodProphecyException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Exception_1_1Prophecy_1_1MethodProphecyException.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Prophecy\\Exception\l\\Prophecy\\ObjectProphecyException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Exception_1_1Prophecy_1_1ObjectProphecyException.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RuntimeException",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Prophecy\\Exception\l\\Prophecy\\ProphecyException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceProphecy_1_1Exception_1_1Prophecy_1_1ProphecyException.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Prophecy\\Exception\l\\Exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceProphecy_1_1Exception_1_1Exception.html"];
+  Node7 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Prophecy\\Exception\l\\Prediction\\PredictionException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceProphecy_1_1Exception_1_1Prediction_1_1PredictionException.html"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

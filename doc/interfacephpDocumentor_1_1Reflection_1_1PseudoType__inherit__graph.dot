@@ -1,0 +1,13 @@
+digraph "phpDocumentor\Reflection\PseudoType"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="phpDocumentor\\Reflection\l\\PseudoType",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="phpDocumentor\\Reflection\\Type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacephpDocumentor_1_1Reflection_1_1Type.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="phpDocumentor\\Reflection\l\\PseudoTypes\\False_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphpDocumentor_1_1Reflection_1_1PseudoTypes_1_1False__.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="phpDocumentor\\Reflection\l\\PseudoTypes\\True_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphpDocumentor_1_1Reflection_1_1PseudoTypes_1_1True__.html"];
+}
