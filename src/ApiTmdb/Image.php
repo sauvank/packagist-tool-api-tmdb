@@ -20,7 +20,7 @@ class Image
     public function __construct(string $path, string $type, string $w = 'original')
     {
         $cache = new Cache();
-        $config = $this->configImage = $cache->get('sauvank_api_tmdb_configuration');
+        $config = $cache->get('sauvank_api_tmdb_configuration');
 
         if(!$config || !isset($config['images'])){
             throw new Exception('Cache configuration is empty', 101);
