@@ -5,10 +5,13 @@ namespace ApiTmdb;
 
 
 use ApiTmdb\ApiObject\Genres;
+use ApiTmdb\ApiObject\Search;
 use ApiTmdb\ApiObject\TvShow\Season;
 use ApiTmdb\ApiObject\TvShow\TvShow;
 
 use Exception;
+use function PHPUnit\Framework\throwException;
+use SebastianBergmann\CodeCoverage\Report\PHP;
 
 class Route extends Config
 {
@@ -29,6 +32,40 @@ class Route extends Config
         $url = $this->generateUrl(['tv', $id]);
         $result = $this->callApi($url);
         return new TvShow($result);
+    }
+
+    /**
+     * @param string $type , tv or movie
+     * @param string $query
+     * @param int $page
+     * @param bool $includeAdult
+     * @param int|null $firstAirDateYear
+     * @return Search
+     * @throws Exception
+     */
+    public function search(string $type, string $query, int $page = 1, bool $includeAdult = false, ?int $firstAirDateYear = null):Search {
+        $validType = ['tv', 'movie'];
+        if(!in_array($type, $validType)){
+            throw new Exception('invalid params $type. valid params : ' . implode(',', $validType), 320);
+        }
+
+        $url = $this->generateUrl(['search', $type],
+            [
+                'query'                 => $query,
+                'page'                  => $page,
+                'include_adult'         => $includeAdult,
+                'first_air_date_year'   => $firstAirDateYear
+            ]);
+
+        $callback = $this->callApi($url, false);
+
+        $fn = $type === 'tv' ? function (int $id){
+            return $this->getTvShowById($id);
+        }: function (int $id){
+            return $this->getMovieById($id);
+        };
+
+        return new Search($callback, $fn);
     }
 
     public function getSeasonDetails(int $seasonId, int $seasonNumber):Season{
@@ -79,31 +116,46 @@ class Route extends Config
 
     /**
      * Generate the end url for call API TMDB
+     * @param string $appendTo, data to append in the end url
+     * @return string
      */
-    protected function endUrl():string {
-        return "api_key=". $this->getApiKey().'&language='.$this->getLang();
+    protected function endUrl(string $appendTo = ''):string {
+        return "api_key=". $this->getApiKey().'&language='.$this->getLang() .'&'. $appendTo;
     }
 
     /**
      * Concact array value with '/'
      * @param array $params
+     * @param string $appendToEnd
      * @return string
      */
-    protected function generateUrl(array $params):string {
+    protected function generateUrl(array $params, array $appendToEnd = []):string {
         $str =  implode('/', $params) . '?';
-        return $this->getBaseUrl() .'/' . $str . $this->endUrl();
+
+        $strAppendToEnd = implode('&', array_map(
+            function ($v, $k) {
+                $v = is_bool($v) ? json_encode($v) : urlencode($v);
+                return sprintf("%s=%s", $k, $v);
+
+                },
+            $appendToEnd,
+            array_keys($appendToEnd)
+        ));
+
+        return $this->getBaseUrl() .'/' . $str . $this->endUrl($strAppendToEnd);
     }
 
     /**
      * Call Api tmdb from url, return array.
      * @param string $url
+     * @param bool $useCache
      * @return mixed
      * @throws Exception
      */
-    protected function callApi(string $url):array {
+    protected function callApi(string $url, bool $useCache = true):array {
 
         $cache = $this->cache->get($url);
-        if($cache){
+        if($cache && $useCache){
             return $cache;
         }
 

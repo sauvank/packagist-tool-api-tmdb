@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['route',['Route',['../classApiTmdb_1_1Route.html',1,'ApiTmdb']]]
+  ['productioncompanies',['ProductionCompanies',['../classApiTmdb_1_1ApiObject_1_1ProductionCompanies.html',1,'ApiTmdb::ApiObject']]]
 ];

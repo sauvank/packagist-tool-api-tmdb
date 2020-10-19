@@ -7,7 +7,7 @@ use Exception;
 
 class Season
 {
-    private string $airDate;
+    private ?string $airDate;
     private int $episodeCount;
     private int $id;
     private string $name;
@@ -32,7 +32,7 @@ class Season
     /**
      * @return string
      */
-    public function getAirDate():string
+    public function getAirDate():?string
     {
         return $this->airDate;
     }

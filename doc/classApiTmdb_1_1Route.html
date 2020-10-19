@@ -93,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48655a6037fe59ab7da44c10e65e49a8"><td class="memItemLeft" align="right" valign="top"><a id="a48655a6037fe59ab7da44c10e65e49a8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>getTvShowById</b> (int $id)</td></tr>
 <tr class="separator:a48655a6037fe59ab7da44c10e65e49a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb3db202a4f05a78cee6f043b54f332"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApiTmdb_1_1Route.html#afcb3db202a4f05a78cee6f043b54f332">search</a> (string $type, string $query, int $page=1, bool $includeAdult=false, ?int $firstAirDateYear=null)</td></tr>
+<tr class="separator:afcb3db202a4f05a78cee6f043b54f332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac40a09f06030d8f1eeeca3ea54365464"><td class="memItemLeft" align="right" valign="top"><a id="ac40a09f06030d8f1eeeca3ea54365464"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>getSeasonDetails</b> (int $seasonId, int $seasonNumber)</td></tr>
 <tr class="separator:ac40a09f06030d8f1eeeca3ea54365464"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,16 +120,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a59dae84a24a4d8f66161d7bb5933e16a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApiTmdb_1_1Route.html#a59dae84a24a4d8f66161d7bb5933e16a">endUrl</a> ()</td></tr>
-<tr class="separator:a59dae84a24a4d8f66161d7bb5933e16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a186c13c7525a869101d0eac57e3022d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApiTmdb_1_1Route.html#a186c13c7525a869101d0eac57e3022d2">generateUrl</a> (array $params)</td></tr>
-<tr class="separator:a186c13c7525a869101d0eac57e3022d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf9e7c029bf4205b852a1802f2e2e439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApiTmdb_1_1Route.html#adf9e7c029bf4205b852a1802f2e2e439">callApi</a> (string $url)</td></tr>
-<tr class="separator:adf9e7c029bf4205b852a1802f2e2e439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09f63884880df4ecec891602341076f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApiTmdb_1_1Route.html#a09f63884880df4ecec891602341076f5">endUrl</a> (string $appendTo='')</td></tr>
+<tr class="separator:a09f63884880df4ecec891602341076f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa814cd57c6aa59de88cba8b973af8bef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApiTmdb_1_1Route.html#aa814cd57c6aa59de88cba8b973af8bef">generateUrl</a> (array $params, array $appendToEnd=[])</td></tr>
+<tr class="separator:aa814cd57c6aa59de88cba8b973af8bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa667ae306b8c1bcbc6d6a5de1f187ac0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApiTmdb_1_1Route.html#aa667ae306b8c1bcbc6d6a5de1f187ac0">callApi</a> (string $url, bool $useCache=true)</td></tr>
+<tr class="separator:aa667ae306b8c1bcbc6d6a5de1f187ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adf9e7c029bf4205b852a1802f2e2e439"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf9e7c029bf4205b852a1802f2e2e439">&#9670;&nbsp;</a></span>callApi()</h2>
+<a id="aa667ae306b8c1bcbc6d6a5de1f187ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa667ae306b8c1bcbc6d6a5de1f187ac0">&#9670;&nbsp;</a></span>callApi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,8 +141,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">ApiTmdb\Route::callApi </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>$url</em></td><td>)</td>
+          <td class="paramname"><em>$url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$useCache</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -152,6 +164,7 @@ Protected Member Functions</h2></td></tr>
 <p>Call Api tmdb from url, return array. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$url</td><td></td></tr>
+    <tr><td class="paramtype">bool</td><td class="paramname">$useCache</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -165,8 +178,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a59dae84a24a4d8f66161d7bb5933e16a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59dae84a24a4d8f66161d7bb5933e16a">&#9670;&nbsp;</a></span>endUrl()</h2>
+<a id="a09f63884880df4ecec891602341076f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09f63884880df4ecec891602341076f5">&#9670;&nbsp;</a></span>endUrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +190,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">ApiTmdb\Route::endUrl </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$appendTo</em> = <code>''</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -187,12 +201,18 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Generate the end url for call API TMDB </p>
+<p>Generate the end url for call API TMDB </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$appendTo,data</td><td>to append in the end url </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
-<a id="a186c13c7525a869101d0eac57e3022d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a186c13c7525a869101d0eac57e3022d2">&#9670;&nbsp;</a></span>generateUrl()</h2>
+<a id="aa814cd57c6aa59de88cba8b973af8bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa814cd57c6aa59de88cba8b973af8bef">&#9670;&nbsp;</a></span>generateUrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,8 +224,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">ApiTmdb\Route::generateUrl </td>
           <td>(</td>
           <td class="paramtype">array&#160;</td>
-          <td class="paramname"><em>$params</em></td><td>)</td>
+          <td class="paramname"><em>$params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$appendToEnd</em> = <code>[]</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -217,6 +247,7 @@ Protected Member Functions</h2></td></tr>
 <p>Concact array value with '/' </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$params</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$appendToEnd</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -239,6 +270,69 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get data configuration image. </p><dl class="section return"><dt>Returns</dt><dd>array|mixed </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afcb3db202a4f05a78cee6f043b54f332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb3db202a4f05a78cee6f043b54f332">&#9670;&nbsp;</a></span>search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ApiTmdb\Route::search </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$page</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$includeAdult</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">?int&#160;</td>
+          <td class="paramname"><em>$firstAirDateYear</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$type,tv</td><td>or movie </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$query</td><td></td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$page</td><td></td></tr>
+    <tr><td class="paramtype">bool</td><td class="paramname">$includeAdult</td><td></td></tr>
+    <tr><td class="paramtype">int&#160;|&#160;null</td><td class="paramname">$firstAirDateYear</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Search </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">Exception</td><td></td></tr>
