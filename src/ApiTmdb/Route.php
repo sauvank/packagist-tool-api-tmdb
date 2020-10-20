@@ -176,6 +176,12 @@ class Route extends Config
             throw new Exception($rep['status_message'], $rep['status_code']);
         }
 
+        if(isset($rep['errors'])){
+            foreach ($rep['errors'] as $error){
+                throw new Exception('Error API URL : ' . $error);
+            }
+        }
+
         $this->cache->set($url,$rep);
         return $rep;
     }
