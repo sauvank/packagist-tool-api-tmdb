@@ -26,6 +26,12 @@ class searchTest extends TestCase
         $callback->getResult(3333);
     }
 
+    public function testSearchTvErrorQueryEmpty(){
+        $this->expectExceptionCode(321);
+        $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
+        $callback = $api->search('tv', '');
+    }
+
     public function testSearchTvGetPage2(){
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $callback = $api->search('tv', 'Futurama', 2);

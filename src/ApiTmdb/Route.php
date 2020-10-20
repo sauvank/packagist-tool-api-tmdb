@@ -45,6 +45,11 @@ class Route extends Config
      */
     public function search(string $type, string $query, int $page = 1, bool $includeAdult = false, ?int $firstAirDateYear = null):Search {
         $validType = ['tv', 'movie'];
+
+        if($query === "" || strlen($query) === 0){
+            throw new Exception('Query must not empty', 321);
+        }
+
         if(!in_array($type, $validType)){
             throw new Exception('invalid params $type. valid params : ' . implode(',', $validType), 320);
         }
