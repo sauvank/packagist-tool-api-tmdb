@@ -3,6 +3,8 @@
 namespace ApiTmdb\ApiObject\TvShow;
 
 use ApiTmdb\ApiObject\CreatedBy;
+use ApiTmdb\ApiObject\Genre;
+use ApiTmdb\ApiObject\Genres;
 use ApiTmdb\ApiObject\Network;
 use ApiTmdb\ApiObject\ProductionCompanies;
 use ApiTmdb\ApiTmdb;
@@ -47,6 +49,7 @@ class TvShow
     private string $type;
     private float $voteAverage;
     private int $voteCount;
+    private Genres $genres;
     private array $productionCompagnies = [];
     private array $seasons = [];
 
@@ -64,10 +67,14 @@ class TvShow
         $this->lastEpisodeToAir     = new Episode($tvShow['last_episode_to_air']);
         $this->name                 = $tvShow['name'];
         $this->nextEpisodeToAir     = is_null($tvShow['next_episode_to_air']) ? null : new Episode($tvShow['next_episode_to_air']);
+
+        $this->genres = new Genres($tvShow['genres']);
+
         $this->setCreatedBy($tvShow['created_by']);
         $this->setNetworks($tvShow['networks']);
         $this->setProductionCompanies($tvShow['production_companies']);
         $this->setSeasons($tvShow['seasons']);
+
     }
 
     /**
@@ -290,6 +297,9 @@ class TvShow
         return  array_shift($result);
     }
 
+    public function getGenres():Genres{
+        return $this->genres;
+    }
     /**
      * @param array $createBy
      */

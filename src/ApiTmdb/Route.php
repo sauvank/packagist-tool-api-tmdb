@@ -91,13 +91,13 @@ class Route extends Config
         return $result;
     }
 
-    public function getGenresMovie():Genres{
+    public function getGenresMovie($useCache = true):Genres{
         $url = $this->generateUrl(['genre/movie/list']);
         $genres =  $this->callApi($url);
 
         $keyCache = 'sauvank_api_tmdb_genre_movie';
         $cache = $this->cache->get($keyCache);
-        if($cache){
+        if($cache && $useCache){
             return $cache;
         }
 

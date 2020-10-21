@@ -11,11 +11,11 @@ class Genres
 
     public function __construct($genres)
     {
-        if(!isset($genres['genres'])){
-            throw new Exception('Key "genres" is not define', 131);
-        }
+//        if(!isset($genres['genres'])){
+//            throw new Exception('Key "genres" is not define', 131);
+//        }
 
-        foreach ($genres['genres'] as $key => $genre){
+        foreach ($genres as $key => $genre){
             $this->genres[] = new Genre($genre['id'], $genre['name']);
         }
     }
@@ -43,6 +43,10 @@ class Genres
      */
     public function getAll():array {
         return $this->genres;
+    }
+
+    public function get(int $index):?Genre{
+        return isset($this->genres[$index]) ? $this->genres[$index] : null;
     }
 
     /**
