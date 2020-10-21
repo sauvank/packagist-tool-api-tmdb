@@ -44,7 +44,7 @@ class TvShow
     private string $overview;
     private string $lastAirDate;
     private float $popularity;
-    private string $posterPath;
+    private ?string $posterPath;
     private string $status;
     private string $type;
     private float $voteAverage;
