@@ -35,7 +35,7 @@ class TvShow
     private array $languages = [];
     private Episode $lastEpisodeToAir;
     private string $name;
-    private ?string $nextEpisodeToAir;
+    private ?Episode $nextEpisodeToAir;
     private int $numberOfEpisodes;
     private int $numberOfSeasons;
     private array $originCountry = [];
