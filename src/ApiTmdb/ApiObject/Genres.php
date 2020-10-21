@@ -14,7 +14,7 @@ class Genres
 //        if(!isset($genres['genres'])){
 //            throw new Exception('Key "genres" is not define', 131);
 //        }
-
+        $genres = isset($genres['genres']) ? $genres['genres'] : $genres;
         foreach ($genres as $key => $genre){
             $this->genres[] = new Genre($genre['id'], $genre['name']);
         }
