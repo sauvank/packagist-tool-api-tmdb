@@ -105,7 +105,7 @@ class TvShow
     /**
      * @return string|null
      */
-    public function getFirstAirDate():string {
+    public function getFirstAirDate():?string {
         return $this->firstAirDate;
     }
 
