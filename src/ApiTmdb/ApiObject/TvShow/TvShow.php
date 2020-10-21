@@ -33,7 +33,7 @@ class TvShow
     private int $id;
     private bool $inProduction;
     private array $languages = [];
-    private Episode $lastEpisodeToAir;
+    private ?Episode $lastEpisodeToAir;
     private string $name;
     private ?Episode $nextEpisodeToAir;
     private int $numberOfEpisodes;
@@ -42,7 +42,7 @@ class TvShow
     private string $originalLanguage;
     private string $originalName;
     private string $overview;
-    private string $lastAirDate;
+    private ?string $lastAirDate;
     private float $popularity;
     private ?string $posterPath;
     private string $status;
@@ -64,7 +64,7 @@ class TvShow
         $this->id                   = $tvShow['id'];
         $this->inProduction         = $tvShow['in_production'];
         $this->languages            = $tvShow['languages'];
-        $this->lastEpisodeToAir     = new Episode($tvShow['last_episode_to_air']);
+        $this->lastEpisodeToAir     = is_null($tvShow['last_episode_to_air']) ? null : new Episode($tvShow['last_episode_to_air']);;
         $this->name                 = $tvShow['name'];
         $this->nextEpisodeToAir     = is_null($tvShow['next_episode_to_air']) ? null : new Episode($tvShow['next_episode_to_air']);
 
@@ -144,7 +144,7 @@ class TvShow
     /**
      * @return string
      */
-    public function getLastAirDate():string
+    public function getLastAirDate():?string
     {
         return $this->lastAirDate;
     }
