@@ -13,10 +13,12 @@ var menudata={children:[
 {text:"c",url:"functions.html#index_c"},
 {text:"e",url:"functions.html#index_e"},
 {text:"g",url:"functions.html#index_g"},
+{text:"o",url:"functions.html#index_o"},
 {text:"s",url:"functions.html#index_s"}]},
 {text:"Functions",url:"functions_func.html",children:[
 {text:"_",url:"functions_func.html#index__"},
 {text:"c",url:"functions_func.html#index_c"},
 {text:"e",url:"functions_func.html#index_e"},
 {text:"g",url:"functions_func.html#index_g"},
+{text:"o",url:"functions_func.html#index_o"},
 {text:"s",url:"functions_func.html#index_s"}]}]}]}]}

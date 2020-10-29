@@ -45,6 +45,23 @@ class Genres
         return $this->genres;
     }
 
+    /**
+     * Order the genres by id value
+     * @param bool $asc , true for get name order by id, false for get by desc
+     * @return Genres
+     */
+    public function orderById($asc = true):Genres{
+        usort($this->genres, function(Genre $a,Genre $b) {
+            return $a->getId() <=> $b->getId();
+        });
+
+        if(!$asc){
+            $this->genres = array_reverse($this->genres);
+        }
+
+        return $this;
+    }
+
     public function get(int $index):?Genre{
         return isset($this->genres[$index]) ? $this->genres[$index] : null;
     }

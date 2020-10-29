@@ -23,4 +23,20 @@ class GenresTest extends TestCase
         $firstResult = $result->getGenres()->get(0)->getName();
         $this->assertEquals($firstResult, 'Sci-Fi & Fantasy');
     }
+
+    public function testGetOrderByAsc(){
+        $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
+        $result = $api->getTvShowById(1399);
+
+        $firstResult = $result->getGenres()->orderById()->get(0);
+        $this->assertEquals(18, $firstResult->getId());
+    }
+
+    public function testGetOrderByDesc(){
+        $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
+        $result = $api->getTvShowById(1399);
+
+        $firstResult = $result->getGenres()->orderById(false)->get(0);
+        $this->assertEquals(10765, $firstResult->getId());
+    }
 }

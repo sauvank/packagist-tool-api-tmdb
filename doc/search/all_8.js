@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['packagist_2dtool_2dapi_2dtmdb',['packagist-tool-api-tmdb',['../md_README.html',1,'']]],
-  ['productioncompanies',['ProductionCompanies',['../classApiTmdb_1_1ApiObject_1_1ProductionCompanies.html',1,'ApiTmdb::ApiObject']]]
+  ['orderbyid',['orderById',['../classApiTmdb_1_1ApiObject_1_1Genres.html#a3f9b9b427c4cc61eb2bbdc519831effe',1,'ApiTmdb::ApiObject::Genres']]]
 ];
