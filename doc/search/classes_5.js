@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['movie',['Movie',['../classApiTmdb_1_1ApiObject_1_1Movie.html',1,'ApiTmdb::ApiObject']]]
+  ['image',['Image',['../classApiTmdb_1_1Image.html',1,'ApiTmdb']]]
 ];

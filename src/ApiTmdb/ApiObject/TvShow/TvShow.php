@@ -2,6 +2,7 @@
 
 namespace ApiTmdb\ApiObject\TvShow;
 
+use ApiTmdb\ApiObject\CommonDetail;
 use ApiTmdb\ApiObject\CreatedBy;
 use ApiTmdb\ApiObject\Genre;
 use ApiTmdb\ApiObject\Genres;
@@ -22,15 +23,12 @@ use phpDocumentor\Reflection\Types\Boolean;
  * Class TvShow
  * @package ApiTmdb\ApiObject\TvShow
  */
-class TvShow
+class TvShow extends CommonDetail
 {
-    private ?string $backdropPath = null;
     private array $createdBy = [];
     private array $networks = [];
     private array $episodeRunTime = [];
     private ?string $firstAirDate = null;
-    private ?string $homepage = null;
-    private int $id;
     private bool $inProduction;
     private array $languages = [];
     private ?Episode $lastEpisodeToAir;
@@ -39,22 +37,15 @@ class TvShow
     private int $numberOfEpisodes;
     private int $numberOfSeasons;
     private array $originCountry = [];
-    private string $originalLanguage;
     private string $originalName;
-    private string $overview;
     private ?string $lastAirDate;
-    private float $popularity;
-    private ?string $posterPath;
-    private string $status;
     private string $type;
-    private float $voteAverage;
-    private int $voteCount;
-    private Genres $genres;
-    private array $productionCompagnies = [];
     private array $seasons = [];
 
     public function __construct(array $tvShow)
     {
+        parent::__construct($tvShow);
+
         $this->backdropPath         = $tvShow['backdrop_path'];
         $this->posterPath           = $tvShow['poster_path'];
         $this->episodeRunTime       = $tvShow['episode_run_time'];
@@ -78,17 +69,6 @@ class TvShow
     }
 
     /**
-     * Get backdrop path url
-     * @param string $w, size of the image :  w300, w780, w1280, original
-     * @return string|null
-     * @throws \Exception
-     */
-    public function getBackdropPath(string $w = 'original'):?string{
-        $img = New Image($this->backdropPath, 'backdrop', $w);
-        return $img->getUrl();
-    }
-
-    /**
      * @return array
      */
     public function getCreateBy():array {
@@ -109,21 +89,6 @@ class TvShow
         return $this->firstAirDate;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getHomepage():?string
-    {
-        return $this->homepage;
-    }
-
-    /**
-     * @return int
-     */
-    public function getId():int
-    {
-        return $this->id;
-    }
 
     /**
      * @return bool
@@ -200,14 +165,6 @@ class TvShow
     /**
      * @return string
      */
-    public function getOriginalLanguage():string
-    {
-        return $this->originalLanguage;
-    }
-
-    /**
-     * @return string
-     */
     public function getOriginalName():string
     {
         return $this->originalName;
@@ -216,60 +173,9 @@ class TvShow
     /**
      * @return string
      */
-    public function getOverview():string
-    {
-        return $this->overview;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPopularity():int
-    {
-        return $this->popularity;
-    }
-
-    /**
-     * @param string $w, w300, w780, w1280, original
-     * @return string
-     * @throws Exception
-     */
-    public function getPosterPath($w = 'original'):string
-    {
-        $img = New Image($this->posterPath, 'poster', $w);
-        return $img->getUrl();
-    }
-
-    /**
-     * @return string
-     */
-    public function getStatus():string
-    {
-        return $this->status;
-    }
-
-    /**
-     * @return string
-     */
     public function getType():string
     {
         return $this->type;
-    }
-
-    /**
-     * @return float
-     */
-    public function getVoteAverage():float
-    {
-        return $this->voteAverage;
-    }
-
-    /**
-     * @return int
-     */
-    public function getVoteCount():int
-    {
-        return $this->voteCount;
     }
 
     /**
@@ -297,9 +203,6 @@ class TvShow
         return  array_shift($result);
     }
 
-    public function getGenres():Genres{
-        return $this->genres;
-    }
     /**
      * @param array $createBy
      */
@@ -315,15 +218,6 @@ class TvShow
     protected function setNetworks(array $networks):void {
         foreach ($networks as $value){
             $this->networks[] = new Network($value);
-        }
-    }
-
-    /**
-     * @param array $pc, array contain production_companies data for create object ProductionCompanies
-     */
-    protected function setProductionCompanies(array $pc):void {
-        foreach ($pc as $value){
-            $this->productionCompagnies[] = new ProductionCompanies($value);
         }
     }
 

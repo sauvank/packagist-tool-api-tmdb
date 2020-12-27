@@ -8,6 +8,7 @@ use ApiTmdb\ApiObject\Genres;
 use ApiTmdb\ApiObject\Search;
 use ApiTmdb\ApiObject\TvShow\Season;
 use ApiTmdb\ApiObject\TvShow\TvShow;
+use ApiTmdb\ApiObject\Movie\Movie;
 
 use Exception;
 use function PHPUnit\Framework\throwException;
@@ -22,10 +23,11 @@ class Route extends Config
         $this->cache = new  Cache();
     }
 
-    public function getMovieById(int $id):array {
+    public function getMovieById(int $id): Movie
+    {
         $url = $this->generateUrl(['movie', $id]);
         $result = $this->callApi($url);
-        return $result;
+        return new Movie($result);
     }
 
     public function getTvShowById(int $id):TvShow {

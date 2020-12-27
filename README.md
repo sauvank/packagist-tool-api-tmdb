@@ -27,6 +27,8 @@ or
         $api->getMovieById(550);
 ````
 
-#### Todo
+### DOC
 
-* movie API class
+> For get the doc, open 'doc/index.html'
+
+#### For update the doc, run ./doc.sh

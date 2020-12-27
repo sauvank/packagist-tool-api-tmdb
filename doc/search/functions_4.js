@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['orderbyid',['orderById',['../classApiTmdb_1_1ApiObject_1_1Genres.html#a3f9b9b427c4cc61eb2bbdc519831effe',1,'ApiTmdb::ApiObject::Genres']]]
+  ['isadult',['isAdult',['../classApiTmdb_1_1ApiObject_1_1Movie_1_1Movie.html#a54388ff02fd0293ccbab76b16b6b5d6a',1,'ApiTmdb::ApiObject::Movie::Movie']]],
+  ['isvideo',['isVideo',['../classApiTmdb_1_1ApiObject_1_1Movie_1_1Movie.html#a20f39fef58ddcb4b4b37fc23c1e08dfb',1,'ApiTmdb::ApiObject::Movie::Movie']]]
 ];
