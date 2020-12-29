@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92a32a27-d055-4a6a-bc5e-fefc44a852f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiTmdb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests/ApitmdbTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests/GenresTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests/MovieTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests/TvShowTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests/searchTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/genres" beforeDir="false" afterPath="$PROJECT_DIR$/app/tests/ImageServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Route.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/CacheService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/CacheService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/ImageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/ImageService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/RouterService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/RouterService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/Service.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ToolApiTmdb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/ToolApiTmdbTest.php" beforeDir="false" />
-    </list>
+    <list default="true" id="92a32a27-d055-4a6a-bc5e-fefc44a852f5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,16 +10,6 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
     <execution />
-  </component>
-  <component name="DockerExecCommand">
-    <ExecCommand>
-      <option name="command" value="/bin/bash" />
-      <option name="imageId" value="sha256:7a6eae3f96af067012b20b242f923d129d5bb214742838bd143ed0c9621f3bc8" />
-    </ExecCommand>
-    <ExecCommand>
-      <option name="command" value="/bin/bash" />
-      <option name="imageId" value="sha256:e3ed4a2c449e9172d039e6db8e3fe4fef06f2590c685616501f601ffadaf3613" />
-    </ExecCommand>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,20 +64,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker-compose.yml" />
     <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb\app\tests" />
-      <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb\app\src\ApiTmdb\Services" />
-      <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb\app\src\ApiTmdb" />
-      <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb\app\src\ApiTmdb\Services" />
-      <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb\app" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -137,9 +99,6 @@
       <workItem from="1608979275645" duration="158000" />
       <workItem from="1608979660431" duration="7392000" />
       <workItem from="1609083808311" duration="1769000" />
-      <workItem from="1609182479633" duration="1087000" />
-      <workItem from="1609187475860" duration="8752000" />
-      <workItem from="1609232985921" duration="8505000" />
     </task>
     <servers />
   </component>
