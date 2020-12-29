@@ -2,8 +2,6 @@
 
 namespace ApiTmdb\ApiObject;
 
-use ApiTmdb\Image;
-
 class Network
 {
     private string $name;
@@ -36,14 +34,11 @@ class Network
     }
 
     /**
-     * @param string $w, w300, w780, w1280, original
      * @return string|null
-     * @throws \Exception
      */
-    public function getLogoPath($w = 'original'):?string
+    public function getLogoPath():?string
     {
-        $img = New Image($this->logoPath, 'logo', $w);
-        return $img->getUrl();
+        return $this->logoPath;
     }
 
     /**

@@ -1,8 +1,5 @@
 <?php
-
-
 namespace ApiTmdb\ApiObject;
-
 
 class Genre
 {

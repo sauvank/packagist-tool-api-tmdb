@@ -2,8 +2,6 @@
 
 namespace ApiTmdb\ApiObject;
 
-use ApiTmdb\Image;
-
 class CreatedBy
 {
     protected int $id;
@@ -54,14 +52,11 @@ class CreatedBy
     }
 
     /**
-     * @param string $w , w300, w780, w1280, original
      * @return string|null
-     * @throws \Exception
      */
-    public function getProfilePath($w = 'original'):?string
+    public function getProfilePath():?string
     {
-        $img = New Image($this->profilePath, 'profile', $w);
-        return $img->getUrl();
+        return $this->profilePath;
     }
 
 }

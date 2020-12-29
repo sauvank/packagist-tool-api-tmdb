@@ -1,9 +1,5 @@
 <?php
-
-
 namespace ApiTmdb\ApiObject;
-
-use ApiTmdb\Services\ImageService;
 
 class CommonDetail
 {
@@ -50,13 +46,10 @@ class CommonDetail
 
     /**
      * Get backdrop path url
-     * @param string $w, size of the image :  w300, w780, w1280, original
      * @return string|null
-     * @throws \Exception
      */
-    public function getBackdropPath(string $w = 'original'):?string{
-        $img = new ImageService($this->backdropPath, 'backdrop', $w);
-        return $img->getUrl();
+    public function getBackdropPath():?string{
+        return $this->backdropPath;
     }
 
     /**
@@ -81,14 +74,11 @@ class CommonDetail
     }
 
     /**
-     * @param string $w, w300, w780, w1280, original
      * @return string
-     * @throws Exception
      */
-    public function getPosterPath($w = 'original'):string
+    public function getPosterPath():string
     {
-        $img = new ImageService($this->posterPath, 'poster', $w);
-        return $img->getUrl();
+        return $this->posterPath;
     }
 
 

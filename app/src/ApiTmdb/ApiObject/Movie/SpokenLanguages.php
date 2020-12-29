@@ -1,13 +1,9 @@
 <?php
-
-
 namespace ApiTmdb\ApiObject\Movie;
-
 
 class SpokenLanguages
 {
     private string $englishName;
-    private string $iso6391;
     private string $name;
 
     public function __construct(array $sl)

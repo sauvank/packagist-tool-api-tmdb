@@ -1,37 +1,25 @@
 <?php
 namespace ApiTmdb\Services;
-use ApiTmdb\Cache;
+
 use Exception;
 
 class ImageService
 {
     private array $configImage;
     private ?string $url = null;
+
     /**
      * Image constructor.
-     * @param string $path
-     * @param string $type, backdrop, still
-     * @param string $w, w300, w780, w1280, original
-     * @throws Exception
+     * @param array $configImages
      */
-    public function __construct(string $path, string $type, string $w = 'original')
+    public function __construct(array $configImages)
     {
-//        parent::__construct();
-        $cache = new CacheService();
-        $config = $cache->get('sauvank_api_tmdb_configuration');
-
-        if(!$config || !isset($config['images'])){
-//            throw new Exception('Cache configuration is empty', 101);
-        }
-        $this->configImage = $config['images'];
-
-        $this->checkParamSize($type, $w);
-
-        $this->url = $this->configImage['secure_base_url']  . $w . $path;
+        $this->configImage = $configImages;
     }
 
-    public function getUrl():?string{
-        return $this->url;
+    public function getUrl(string $path, string $type, string $w = 'original'):?string{
+        $this->checkParamSize($type, $w);
+        return $this->configImage['secure_base_url']  . $w . $path;;
     }
 
     /**

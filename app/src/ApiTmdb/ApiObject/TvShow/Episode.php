@@ -1,8 +1,5 @@
 <?php
-
-
 namespace ApiTmdb\ApiObject\TvShow;
-
 
 use ApiTmdb\ApiObject\Crew;
 use ApiTmdb\ApiObject\GuestStars;
@@ -17,7 +14,7 @@ class Episode
     private string $productionCode;
     private string $episodeNumber;
     private int $seasonNumber;
-    private ?ImageService $stillPath;
+    private ?string $stillPath;
     private float $voteAverage;
     private int $voteCount;
     private array $crews = [];
@@ -38,7 +35,7 @@ class Episode
         $this->productionCode   = $episode['production_code'];
         $this->episodeNumber    = $episode['episode_number'];
         $this->seasonNumber     = $episode['season_number'];
-        $this->stillPath        = is_null($episode['still_path'])? null : new ImageService($episode['still_path'], 'still');
+        $this->stillPath        = is_null($episode['still_path'])? null : $episode['still_path'];
         $this->voteAverage      = $episode['vote_average'];
         $this->voteCount        = $episode['vote_count'];
 
@@ -105,7 +102,7 @@ class Episode
     /**
      * @return ImageService or null
      */
-    public function getStillPath():?ImageService
+    public function getStillPath():?string
     {
         return $this->stillPath;
     }

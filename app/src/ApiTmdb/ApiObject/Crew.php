@@ -1,10 +1,5 @@
 <?php
-
-
 namespace ApiTmdb\ApiObject;
-
-
-use \ApiTmdb\Services\ImageService;
 
 class Crew
 {
@@ -76,13 +71,10 @@ class Crew
     }
 
     /**
-     * @param string $w, w300, w780, w1280, original
      * @return string|null
-     * @throws \Exception
      */
-    public function getProfilePath($w = 'original'):?string
+    public function getProfilePath():?string
     {
-        $img = New ImageService($this->profilePath, 'profile', $w);
-        return $img->getUrl();
+        return $this->profilePath;
     }
 }

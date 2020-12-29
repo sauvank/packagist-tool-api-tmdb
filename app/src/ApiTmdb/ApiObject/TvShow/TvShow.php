@@ -4,19 +4,9 @@ namespace ApiTmdb\ApiObject\TvShow;
 
 use ApiTmdb\ApiObject\CommonDetail;
 use ApiTmdb\ApiObject\CreatedBy;
-use ApiTmdb\ApiObject\Genre;
 use ApiTmdb\ApiObject\Genres;
 use ApiTmdb\ApiObject\Network;
-use ApiTmdb\ApiObject\ProductionCompanies;
-use ApiTmdb\ApiTmdb;
-use ApiTmdb\Cache;
-use ApiTmdb\Config;
-use \ApiTmdb\Services\ImageService;
-use ApiTmdb\Route;
-use ApiTmdb\Url;
 use Exception;
-use phpDocumentor\Reflection\Types\Array_;
-use phpDocumentor\Reflection\Types\Boolean;
 
 /**
  * Getter and setter of all params get from API TMDB for TVSHOW

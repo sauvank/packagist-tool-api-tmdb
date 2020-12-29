@@ -12,7 +12,7 @@ class Season
     private int $id;
     private string $name;
     private string $overview;
-    private ?ImageService $posterPath;
+    private ?string $posterPath;
     private int $seasonNumber;
     private array $episodes = [];
 
@@ -23,7 +23,7 @@ class Season
         $this->airDate = $season['air_date'];
         $this->name = $season['name'];
         $this->overview = $season['overview'];
-        $this->posterPath = is_null($season['poster_path']) ? null : new ImageService($season['poster_path'], 'poster');
+        $this->posterPath = is_null($season['poster_path']) ? null : $season['poster_path'];
         $this->seasonNumber = $season['season_number'];
 
         isset($season['episodes']) ? $this->setEpisodes($season['episodes']) : null;
@@ -72,7 +72,7 @@ class Season
     /**
      * @return ImageService|null
      */
-    public function getPosterPath(): ?ImageService
+    public function getPosterPath(): ?string
     {
         return $this->posterPath;
     }
