@@ -1,26 +1,139 @@
 <?php
+
 namespace ApiTmdb\Services;
+
+
+use ApiTmdb\ApiObject\Genres;
+use ApiTmdb\ApiObject\Search;
+use ApiTmdb\ApiObject\TvShow\Season;
+use ApiTmdb\ApiObject\TvShow\TvShow;
+use ApiTmdb\ApiObject\Movie\Movie;
+
 use Exception;
+use function PHPUnit\Framework\throwException;
+use SebastianBergmann\CodeCoverage\Report\PHP;
 
-class RouterService{
-
-    private \Memcached $cacheService;
+class RouterService
+{
+    private \Memcached $cache;
     private static string $baseUrl = "https://api.themoviedb.org/3";
     private static string $apiKey;
-    private static string $lang;
-    public function __construct(string $apiKey, string $lang = 'EN-en')
+    private string $lang;
+
+    public function __construct(string $apiKey, string $lang)
     {
         $cache = new CacheService();
-        $this->cacheService  =$cache->getCache();
+        $this->cache = $cache->getCache();
+
         self::$apiKey = $apiKey;
-        self::$lang = $lang;
+        $this->lang = $lang;
     }
 
-    public function getConfiguration() {
+    public function setLang(string $lang){
+        $this->lang = $lang;
+    }
+
+    public function getLang(){
+        return $this->lang;
+    }
+
+    public function getMovieById(int $id): Movie
+    {
+        $url = $this->generateUrl(['movie', $id]);
+        $result = $this->callApi($url);
+        return new Movie($result);
+    }
+
+    public function getTvShowById(int $id):TvShow {
+        $url = $this->generateUrl(['tv', $id]);
+        $result = $this->callApi($url);
+        return new TvShow($result);
+    }
+
+    /**
+     * @param string $type , tv or movie
+     * @param string $query
+     * @param int $page
+     * @param bool $includeAdult
+     * @param int|null $firstAirDateYear
+     * @return Search
+     * @throws Exception
+     */
+    public function search(string $type, string $query, int $page = 1, bool $includeAdult = false, ?int $firstAirDateYear = null):Search {
+        $validType = ['tv', 'movie'];
+
+        if($query === "" || strlen($query) === 0){
+            throw new Exception('Query must not empty', 321);
+        }
+
+        if(!in_array($type, $validType)){
+            throw new Exception('invalid params $type. valid params : ' . implode(',', $validType), 320);
+        }
+
+        $url = $this->generateUrl(['search', $type],
+            [
+                'query'                 => $query,
+                'page'                  => $page,
+                'include_adult'         => $includeAdult,
+                'first_air_date_year'   => $firstAirDateYear
+            ]);
+
+        $callback = $this->callApi($url, false);
+
+        $fn = $type === 'tv' ? function (int $id){
+            return $this->getTvShowById($id);
+        }: function (int $id){
+            return $this->getMovieById($id);
+        };
+
+        return new Search($callback, $fn);
+    }
+
+    public function getSeasonDetails(int $seasonId, int $seasonNumber):Season{
+        $url = $this->generateUrl(['tv',$seasonId,'season',$seasonNumber]);
+        $result = $this->callApi($url);
+        return new Season($result);
+    }
+
+    /**
+     * Get data configuration image.
+     * @return array|mixed
+     * @throws Exception
+     */
+    public function getConfiguration():array {
         $url = $this->generateUrl(['configuration']);
-        return $this->callApi($url);
+        $result =  $this->callApi($url);
+        $this->cache->set('sauvank_api_tmdb_configuration', $result);
+        return $result;
     }
 
+    public function getGenresMovie($useCache = true):Genres{
+        $url = $this->generateUrl(['genre/movie/list']);
+        $genres =  $this->callApi($url);
+
+        $keyCache = 'sauvank_api_tmdb_genre_movie';
+        $cache = $this->cache->get($keyCache);
+        if($cache && $useCache){
+            return $cache;
+        }
+
+        $this->cache->set($keyCache, new Genres($genres));
+        return new Genres($genres);
+    }
+
+    public function getGenresTvShow():Genres{
+        $url = $this->generateUrl(['genre/tv/list']);
+        $genres =  $this->callApi($url);
+
+        $keyCache = 'sauvank_api_tmdb_genre_tvshow';
+        $cache = $this->cache->get($keyCache);
+        if($cache){
+            return $cache;
+        }
+
+        $this->cache->set($keyCache, new Genres($genres));
+        return new Genres($genres);
+    }
 
     /**
      * Generate the end url for call API TMDB
@@ -28,7 +141,7 @@ class RouterService{
      * @return string
      */
     protected function endUrl(string $appendTo = ''):string {
-        return "api_key=". self::$apiKey.'&language='.self::$lang .'&'. $appendTo;
+        return "api_key=".self::$apiKey.'&language='.$this->lang .'&'. $appendTo;
     }
 
     /**
@@ -61,7 +174,8 @@ class RouterService{
      * @throws Exception
      */
     protected function callApi(string $url, bool $useCache = true):array {
-        $cache = $this->cacheService->get($url);
+
+        $cache = $this->cache->get($url);
         if($cache && $useCache){
             return $cache;
         }
@@ -89,7 +203,7 @@ class RouterService{
             }
         }
 
-        $this->cacheService->set($url,$rep);
+        $this->cache->set($url,$rep);
         return $rep;
     }
 }

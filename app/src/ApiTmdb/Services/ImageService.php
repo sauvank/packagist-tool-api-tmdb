@@ -14,12 +14,12 @@ class ImageService
      */
     public function __construct(array $configImages)
     {
-        $this->configImage = $configImages;
+        $this->configImage = $configImages['images'];
     }
 
     public function getUrl(string $path, string $type, string $w = 'original'):?string{
         $this->checkParamSize($type, $w);
-        return $this->configImage['secure_base_url']  . $w . $path;;
+        return $this->configImage['secure_base_url']  . $w . $path;
     }
 
     /**

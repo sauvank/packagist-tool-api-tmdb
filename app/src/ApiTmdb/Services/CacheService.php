@@ -12,7 +12,6 @@ class CacheService
 
     public function __construct()
     {
-        var_dump('init cacheService');
     }
 
     public static function getCache(string $host = 'localhost',int $port = 11211, int $weight = 0):\Memcached {

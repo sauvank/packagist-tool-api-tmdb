@@ -2,34 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92a32a27-d055-4a6a-bc5e-fefc44a852f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/RouterService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/Service.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ToolApiTmdb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests/ToolApiTmdbTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiTmdb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/ApitmdbTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/GenresTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/MovieTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/TvShowTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/searchTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/CommonDetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/CommonDetail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/CreatedBy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/CreatedBy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Crew.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Crew.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Genre.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Genre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Genres.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Genres.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/GuestStars.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/GuestStars.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Movie/SpokenLanguages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Movie/SpokenLanguages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Network.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/Network.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/ProductionCompanies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/ProductionCompanies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/TvShow/Episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/TvShow/Episode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/TvShow/Season.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/TvShow/Season.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/TvShow/TvShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/ApiObject/TvShow/TvShow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ApiTmdb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/genres" beforeDir="false" afterPath="$PROJECT_DIR$/app/tests/ImageServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Route.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/CacheService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/CacheService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/ImageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/ImageService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Url.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/ApiTmdbTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/CrewTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/GenresTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/MovieTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/TvShowTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/searchTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/RouterService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/ApiTmdb/Services/RouterService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/Services/Service.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/ApiTmdb/ToolApiTmdb.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tests/ToolApiTmdbTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +90,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/ApiTmdb/Services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/tests" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb\app\tests" />
       <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb\app\src\ApiTmdb\Services" />
       <recent name="C:\Users\thega\Documents\GitHub\packagist-tool-api-tmdb" />
     </key>
@@ -151,7 +139,7 @@
       <workItem from="1609083808311" duration="1769000" />
       <workItem from="1609182479633" duration="1087000" />
       <workItem from="1609187475860" duration="8752000" />
-      <workItem from="1609232985921" duration="4008000" />
+      <workItem from="1609232985921" duration="8505000" />
     </task>
     <servers />
   </component>
