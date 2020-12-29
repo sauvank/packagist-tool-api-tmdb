@@ -2,7 +2,7 @@
 
 use ApiTmdb\ApiTmdb;
 use PHPUnit\Framework\TestCase;
-use ApiTmdb\ApiObject\TvShow\TvShow;
+use ApiTmdb\Model\TvShow\TvShow;
 class TvShowTest extends TestCase
 {
     public function getApiKey(){
@@ -18,20 +18,23 @@ class TvShowTest extends TestCase
     public function testBackdropPathUrlOriginal(){
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $result = $api->getTvShowById(48866);
-        $this->assertEquals($result->getBackdropPath(),  "https://image.tmdb.org/t/p/original/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg");
+        $imageUrl = $api->imageSrv()->getUrl($result->getBackdropPath(), 'backdrop');
+        $this->assertEquals($imageUrl,  "https://image.tmdb.org/t/p/original/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg");
     }
 
     public function testBackdropPathUrlParamsSuccess(){
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $result = $api->getTvShowById(48866);
-        $this->assertEquals($result->getBackdropPath('w300'),  "https://image.tmdb.org/t/p/w300/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg");
+        $imageUrl = $api->imageSrv()->getUrl($result->getBackdropPath(), 'backdrop', 'w300');
+        $this->assertEquals($imageUrl,  "https://image.tmdb.org/t/p/w300/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg");
+
     }
 
     public function testBackdropPathUrlParamsError(){
         $this->expectExceptionCode(111);
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $result = $api->getTvShowById(48866);
-        $result->getBackdropPath('BAD_WITH');
+        $imageUrl = $api->imageSrv()->getUrl($result->getBackdropPath(), 'backdrop', 'BADWIDTH');
     }
 
     /***
@@ -47,7 +50,7 @@ class TvShowTest extends TestCase
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $result = $api->getGenresTvShow();
         $result->getById(16);
-        $this->assertInstanceOf(\ApiTmdb\ApiObject\Genre::class, $result->getById(16));
+        $this->assertInstanceOf(\ApiTmdb\Model\Genre::class, $result->getById(16));
     }
 
     public function testGenresTvShowNotNameExist(){
@@ -60,7 +63,7 @@ class TvShowTest extends TestCase
     public function testGenresTvShowExist(){
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $result = $api->getGenresTvShow();
-        $this->assertInstanceOf(\ApiTmdb\ApiObject\Genre::class, $result->getByName('Animation'));
+        $this->assertInstanceOf(\ApiTmdb\Model\Genre::class, $result->getByName('Animation'));
     }
 
     /*****************************************
@@ -88,13 +91,13 @@ class TvShowTest extends TestCase
     public function testGetSeasonEpisodes(){
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $seasonDetails = $api->getSeasonDetails(48866, 1);
-        $this->assertInstanceOf(\ApiTmdb\ApiObject\TvShow\Episode::class, $seasonDetails->getEpisodes()[0]);
+        $this->assertInstanceOf(\ApiTmdb\Model\TvShow\Episode::class, $seasonDetails->getEpisodes()[0]);
     }
 
     public function testGetEpisodeDetails(){
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $seasonDetails = $api->getSeasonDetails(48866, 1);
         $episode = $seasonDetails->getEpisode(1);
-        $this->assertInstanceOf(\ApiTmdb\ApiObject\TvShow\Episode::class, $episode);
+        $this->assertInstanceOf(\ApiTmdb\Model\TvShow\Episode::class, $episode);
     }
 }

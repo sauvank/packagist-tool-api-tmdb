@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endurl',['endUrl',['../classApiTmdb_1_1Route.html#a09f63884880df4ecec891602341076f5',1,'ApiTmdb::Route']]]
+  ['endurl',['endUrl',['../classApiTmdb_1_1Services_1_1RouterService.html#a04dd01d3f54a1f1d18d0584fd34fc830',1,'ApiTmdb::Services::RouterService']]]
 ];

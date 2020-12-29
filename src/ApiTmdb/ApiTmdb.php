@@ -1,28 +1,26 @@
 <?php
 
 namespace ApiTmdb;
-use Exception;
+use ApiTmdb\Model\Movie\Movie;
+use ApiTmdb\Services\ImageService;
+use ApiTmdb\Services\RouterService;
 
-class ApiTmdb extends Route
+class ApiTmdb extends RouterService
 {
-    /**
-     * ApiTmdb constructor.
-     * Set default data for request to the Api TMDB
-     * For get api key : https://developers.themoviedb.org/3/getting-started/authentication
-     * For get available language : https://developers.themoviedb.org/3/getting-started/languages
-     * @param string $apiKey The api key for request to api tmdb
-     * @param string $lang The language for data Api.
-     * @throws Exception
-     */
-    public function __construct(string $apiKey, string $lang ='EN-en')
-    {
-        parent::__construct();
+    private ImageService $imageService;
 
-        $this->setApiKey($apiKey);
-        $this->setLang($lang);
-        //Set configuration images in cache
-        $this->getConfiguration();
-        $this->getGenresMovie();
-        $this->getGenresTvShow();
+    public function __construct(string $apiKey, $lang = 'EN-en')
+    {
+        parent::__construct($apiKey, $lang);
+        $this->imageService = new ImageService($this->getConfiguration());
+
     }
+
+    public function imageSrv():ImageService{
+        return $this->imageService;
+    }
+//    public function pathImageToUrl(string $path, string $typeImage, string $w = 'original'){
+//        $image = new ImageService();
+//        return $image->getUrl($path, $typeImage, $w);
+//    }
 }

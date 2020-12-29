@@ -1,9 +1,9 @@
 <?php
 
-use ApiTmdb\ApiObject\Genre;
+use ApiTmdb\Model\Genre;
 use ApiTmdb\ApiTmdb;
 use PHPUnit\Framework\TestCase;
-use ApiTmdb\ApiObject\TvShow\TvShow;
+use ApiTmdb\Model\TvShow\TvShow;
 class GenresTest extends TestCase
 {
     public function getApiKey(){

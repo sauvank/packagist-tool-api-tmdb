@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="PHPUnit\\Runner\\BaseTestRunner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1Runner_1_1BaseTestRunner.html"];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="PHPUnit\\TextUI\\TestRunner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPHPUnit_1_1TextUI_1_1TestRunner.html"];
-}

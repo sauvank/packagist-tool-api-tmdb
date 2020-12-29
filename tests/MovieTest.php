@@ -1,6 +1,6 @@
 <?php
 
-use ApiTmdb\ApiObject\Movie\Movie;
+use ApiTmdb\Model\Movie\Movie;
 use PHPUnit\Framework\TestCase;
 class MovieTest extends TestCase
 {
@@ -71,7 +71,7 @@ class MovieTest extends TestCase
     public function testBelongsToCollectionExist(){
         $api = new \ApiTmdb\ApiTmdb($this->getApiKey());
         $result = $api->getMovieById(11);
-        $this->assertInstanceOf(\ApiTmdb\ApiObject\Movie\BelongToCollection::class, $result->getBelongsToCollection());
+        $this->assertInstanceOf(\ApiTmdb\Model\Movie\BelongToCollection::class, $result->getBelongsToCollection());
     }
 
     public function testBelongsToCollectionIsNull(){

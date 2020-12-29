@@ -1,9 +1,9 @@
 <?php
 
-use ApiTmdb\ApiObject\Search;
+use ApiTmdb\Model\Search;
 use ApiTmdb\ApiTmdb;
 use PHPUnit\Framework\TestCase;
-use ApiTmdb\ApiObject\TvShow\TvShow;
+use ApiTmdb\Model\TvShow\TvShow;
 class searchTest extends TestCase
 {
     public function getApiKey(){

@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="Prophecy\\Doubler\\Generator\l\\Node\\ArgumentNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphecy_1_1Doubler_1_1Generator_1_1Node_1_1ArgumentNode.html"];
-}
